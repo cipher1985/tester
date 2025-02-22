@@ -1,4 +1,4 @@
-/*
+﻿/*
  *  SPDX-FileCopyrightText: 2021 Agata Cacko cacko.azh@gmail.com
  *
  * SPDX-License-Identifier: GPL-3.0-or-later

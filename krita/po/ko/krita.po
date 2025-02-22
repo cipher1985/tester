@@ -100550,7 +100550,7 @@ msgstr "참조 이미지 도구"
 #~ msgstr ""
 #~ "죄송합니다. Krita는 GNU Scientific Library의 지원없이 제작되고 있기 때문"
 #~ "에 핸들에서 선택의 크기를 바꿀 수 없습니다. GNU Scientific Library 지원으"
-#~ "로 Kirta를 컴파일하거나 수동으로 크기를 편집하는 옵션 위젯을 사용하십시오."
+#~ "로 krita를 컴파일하거나 수동으로 크기를 편집하는 옵션 위젯을 사용하십시오."
 
 #, fuzzy
 #~| msgctxt "floating message in transformation tool"
