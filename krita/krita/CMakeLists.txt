@@ -1,4 +1,4 @@
-add_subdirectory( dtd )
+﻿add_subdirectory( dtd )
 add_subdirectory( data )
 add_subdirectory( integration )
 # Install the application icons following the freedesktop icon theme spec
@@ -87,6 +87,7 @@ set(krita_QRCS
     ${CMAKE_SOURCE_DIR}/krita/pics/branding/${BRANDING}/branding.qrc
     ${CMAKE_SOURCE_DIR}/krita/data/splash/splash.qrc
     ${CMAKE_SOURCE_DIR}/krita/pics/sponsors/sponsors.qrc
+    ${CMAKE_SOURCE_DIR}/libs/ui/ext_dev/extres.qrc
     CACHE INTERNAL "krita_QRCS"
 )
 

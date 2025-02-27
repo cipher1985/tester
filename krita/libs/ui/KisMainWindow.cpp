@@ -1,4 +1,4 @@
-/* This file is part of the KDE project
+﻿/* This file is part of the KDE project
    SPDX-FileCopyrightText: 1998, 1999 Torben Weis <weis@kde.org>
    SPDX-FileCopyrightText: 2000-2006 David Faure <faure@kde.org>
    SPDX-FileCopyrightText: 2007, 2009 Thomas zander <zander@kde.org>
@@ -176,7 +176,7 @@ public:
         return DockRight;
     }
 };
-
+#include "ext_dev/extmainframe.h"
 class Q_DECL_HIDDEN KisMainWindow::Private
 {
 public:
@@ -202,7 +202,9 @@ public:
         welcomeScroller->setWidget(welcomePage);
         welcomeScroller->setWidgetResizable(true);
 
-        widgetStack->addWidget(welcomeScroller);
+        ExtMainFrame* extMain = new ExtMainFrame;
+        widgetStack->addWidget(extMain);
+        //widgetStack->addWidget(welcomeScroller);
         widgetStack->addWidget(mdiArea);
         mdiArea->setTabsMovable(true);
         mdiArea->setActivationOrder(QMdiArea::ActivationHistoryOrder);

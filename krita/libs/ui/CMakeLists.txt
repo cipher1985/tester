@@ -1,4 +1,4 @@
-include_directories(
+﻿include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/qtlockedfile
 )
 
@@ -17,6 +17,9 @@ if (APPLE)
     find_library(FOUNDATION_LIBRARY Foundation)
     find_library(APPKIT_LIBRARY AppKit)
 endif ()
+
+# 添加子模块
+add_subdirectory(ext_dev)
 
 set(kritaui_LIB_SRCS
     canvas/kis_canvas_widget_base.cpp
@@ -681,6 +684,10 @@ endif()
 kis_add_library(kritaui SHARED ${kritaui_HEADERS_MOC} ${kritaui_LIB_SRCS})
 generate_export_header(kritaui BASE_NAME kritaui)
 
+target_compile_definitions(ext_dev PUBLIC EXT_DEV_LIBRARY)
+# 添加头文件根搜索路径
+target_include_directories(kritaui PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
 target_link_libraries(kritaui
     PUBLIC
         KF${KF_MAJOR}::CoreAddons
@@ -703,6 +710,8 @@ target_link_libraries(kritaui
         kritawidgets
         kritawidgetutils
         kritaresources
+
+        ext_dev
 )
 
 if (Mlt7_FOUND)

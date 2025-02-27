@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PaintWidget</class>
+ <widget class="QWidget" name="PaintWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>572</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PaintWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#widget_painter_title {
+	background-color:#141414;
+}
+QToolButton {
+	background:transparent;
+	border: 0px;
+	color:#888888;
+	font: 18px &quot;PingFang SC-Medium&quot;;
+}
+QWidget#main_frame{
+	background:#363636;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget_painter_title" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>44</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <property name="leftMargin">
+       <number>16</number>
+      </property>
+      <property name="rightMargin">
+       <number>16</number>
+      </property>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_gallery">
+        <property name="layoutDirection">
+         <enum>Qt::LayoutDirection::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>图库</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/return_0.png</normaloff>:/ResExt/mipmap-mdpi/return_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="popupMode">
+         <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_option">
+        <property name="text">
+         <string>操作</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/option_0.png</normaloff>:/ResExt/mipmap-mdpi/option_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoRaise">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_modify">
+        <property name="text">
+         <string>调整</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/modify_0.png</normaloff>:/ResExt/mipmap-mdpi/modify_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_cursor">
+        <property name="text">
+         <string>指针</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/cursor_0.png</normaloff>:/ResExt/mipmap-mdpi/cursor_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_select">
+        <property name="text">
+         <string>选取</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/select_0.png</normaloff>:/ResExt/mipmap-mdpi/select_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_translate">
+        <property name="text">
+         <string>变形</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/translate_0.png</normaloff>:/ResExt/mipmap-mdpi/translate_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_share">
+        <property name="text">
+         <string>分享</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/share_0.png</normaloff>:/ResExt/mipmap-mdpi/share_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>36</width>
+          <height>36</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Policy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>299</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_shape">
+        <property name="text">
+         <string>快捷图案</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/shape_0.png</normaloff>:/ResExt/mipmap-mdpi/shape_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_paint">
+        <property name="text">
+         <string>绘图</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/paint_0.png</normaloff>:/ResExt/mipmap-mdpi/paint_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_brush">
+        <property name="text">
+         <string>涂抹</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/brush_0.png</normaloff>:/ResExt/mipmap-mdpi/brush_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_layer">
+        <property name="text">
+         <string>图层</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/layer_0.png</normaloff>:/ResExt/mipmap-mdpi/layer_0.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QtToolButtonEx" name="toolButton_color">
+        <property name="text">
+         <string>颜色</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../extres.qrc">
+          <normaloff>:/ResExt/mipmap-mdpi/color.png</normaloff>:/ResExt/mipmap-mdpi/color.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_canvas" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="main_frame">
+        <property name="frameShape">
+         <enum>QFrame::Shape::Box</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QtToolButtonEx</class>
+   <extends>QToolButton</extends>
+   <header location="global">Utils/qttoolbuttonex.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../extres.qrc"/>
+ </resources>
+ <connections/>
+</ui>

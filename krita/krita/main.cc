@@ -1,4 +1,4 @@
-/*
+﻿/*
 * SPDX-FileCopyrightText: 1999 Matthias Elter <me@kde.org>
 * SPDX-FileCopyrightText: 2002 Patrick Julien <freak@codepimps.org>
 * SPDX-FileCopyrightText: 2015 Boudewijn Rempt <boud@valdyas.org>
